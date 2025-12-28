@@ -6,12 +6,14 @@ import LivingTimeline from './components/LivingTimeline';
 import ProjectTrack from './components/ProjectTrack';
 import AboutSection from './components/AboutSection';
 import { PROJECTS } from './constants';
+import { Instagram } from 'lucide-react';
 
 const App: React.FC = () => {
   const email = "chhimpav835@gmail.com";
   const subject = encodeURIComponent("Let's Collaborate");
   const body = encodeURIComponent("Hello! I'm interested in your video editing services.");
   const mailtoUrl = `mailto:${email}?subject=${subject}&body=${body}`;
+  const instagramUrl = "https://www.instagram.com/vijay.o1/";
 
   return (
     <div className="relative min-h-screen selection:bg-blue-500 selection:text-white">
@@ -88,9 +90,9 @@ const App: React.FC = () => {
           </div>
           <div className="flex justify-between items-center pt-10 border-t border-white/10">
             <p className="mono text-[9px] opacity-40 uppercase">&copy; 2024 Junior Editor Portfolio.</p>
-            <div className="flex gap-4 mono text-[9px] opacity-60 uppercase">
-              <a href="#" className="hover:text-blue-400">TikTok</a>
-              <a href="#" className="hover:text-blue-400">Instagram</a>
+            <div className="flex items-center gap-4 mono text-[10px] uppercase font-bold text-blue-500">
+              <Instagram size={16} />
+              <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Instagram</a>
             </div>
           </div>
         </div>
