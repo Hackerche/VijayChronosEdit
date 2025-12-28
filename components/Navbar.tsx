@@ -1,12 +1,13 @@
 
 import React from 'react';
-import { Monitor, Cpu, History, Mail, User } from 'lucide-react';
+import { Monitor, Cpu, History, Mail, User, Instagram } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const email = "chhimpav835@gmail.com";
   const subject = encodeURIComponent("Project Inquiry - Video Editing");
   const body = encodeURIComponent("Hi! I saw your portfolio and would like to discuss a video project with you.");
   const mailtoUrl = `mailto:${email}?subject=${subject}&body=${body}`;
+  const instagramUrl = "https://www.instagram.com/vijay.o1/";
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center pointer-events-none">
@@ -16,15 +17,15 @@ const Navbar: React.FC = () => {
         </h1>
       </div>
 
-      <div className="hidden md:flex gap-8 pointer-events-auto bg-black/40 backdrop-blur-xl border border-white/10 px-6 py-3 rounded-full">
+      <div className="hidden md:flex gap-8 pointer-events-auto bg-black/40 backdrop-blur-xl border border-white/10 px-6 py-3 rounded-full items-center">
         <a href="#about" className="mono text-[11px] uppercase tracking-widest hover:text-blue-400 transition-colors flex items-center gap-2">
           <User size={14} /> Profile
         </a>
         <a href="#work" className="mono text-[11px] uppercase tracking-widest hover:text-blue-400 transition-colors flex items-center gap-2">
           <Monitor size={14} /> Projects
         </a>
-        <a href="#pipeline" className="mono text-[11px] uppercase tracking-widest hover:text-blue-400 transition-colors flex items-center gap-2">
-          <Cpu size={14} /> Pipeline
+        <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="mono text-[11px] uppercase tracking-widest hover:text-blue-400 transition-colors flex items-center gap-2">
+          <Instagram size={14} /> Instagram
         </a>
         <a href="#contact" className="mono text-[11px] uppercase tracking-widest hover:text-blue-400 transition-colors flex items-center gap-2">
           <Mail size={14} /> Contact
